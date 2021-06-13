@@ -16,6 +16,9 @@ are caught and reported. At some point these things should be moved to WARN.
 If there are parse exceptions, this script should be run to generate an info
 for the ticket filed.
 """
+
+#adjusting to output replayed game as json file
+
 from __future__ import absolute_import, print_function, unicode_literals, division
 
 import argparse
