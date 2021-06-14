@@ -8,6 +8,11 @@ from sc2reader.log_utils import loggable
 from itertools import chain
 
 
+#Creating fake class to test that Skynet POC has the correct fork of sc2reader
+class TestClass:
+    def testFunc(self):
+        print('Test Class Works!')
+
 @loggable
 class GameEvent(Event):
     """
