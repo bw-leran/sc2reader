@@ -56,7 +56,21 @@ def main():
                 already_did = rs in releases_parsed
                 releases_parsed.add(rs)
                 if not args.one_each or not already_did:
-                    replay = sc2reader.load_replay(path, debug=True, load_level=1)
+                    replay = sc2reader.load_replay(path, debug=True, load_level=4) #change this to load_level=4
+
+                    '''
+                    Note to Scott:
+                    I've changed the load_level to 4, but I am not sure how to actually run this code to check the
+                    new output. I have tried running the py file directly and get this error:
+                    
+                    usage: sc2parse.py [-h] [--one_each] [--ladder_only] folder [folder ...]
+                    sc2parse.py: error: the following arguments are required: folder
+                    
+                    I'm not sure how to test the changes I've made to this file.
+                    
+                    Thanks
+                    '''
+
                     if not args.one_each or replay.is_ladder:
                         replay = sc2reader.load_replay(path, debug=True)
 
