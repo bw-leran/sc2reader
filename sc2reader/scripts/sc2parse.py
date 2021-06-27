@@ -56,8 +56,7 @@ def main():
                 already_did = rs in releases_parsed
                 releases_parsed.add(rs)
                 if not args.one_each or not already_did:
-                    replay = sc2reader.load_replay(path, debug=True, load_level=1)
-                    #replay = sc2reader.load_replay(path, debug=True, load_level=4) #change this to load_level=4
+                    replay = sc2reader.load_replay(path, debug=True, load_level=4) #change this to load_level=4
 
                     '''
                     Note to Scott:
