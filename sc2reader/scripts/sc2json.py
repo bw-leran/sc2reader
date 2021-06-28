@@ -36,13 +36,12 @@ def main():
     factory = sc2reader.factories.SC2Factory()
     try:
         factory.register_plugin(
-            "Replay", toJSON(encoding=args.encoding, indent=args.indent)
+            "Replay", toJSON(encoding="UTF-8", indent=1)
         )  # legacy Python
     except TypeError:
         factory.register_plugin("Replay", toJSON(indent=args.indent))
     replay_json = factory.load_replay(args.path[0])
     print(replay_json)
-
 
 if __name__ == "__main__":
     main()
